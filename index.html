@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="NoPreload : A Safari extension to disable preloading of HTML5 audio content." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>NoPreload</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/robmathers/NoPreload">View on GitHub</a>
+
+          <h1 id="project_title">NoPreload</h1>
+          <h2 id="project_tagline">A Safari extension to disable preloading of HTML5 audio content.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/robmathers/NoPreload/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/robmathers/NoPreload/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="nopreload" class="anchor" href="#nopreload"><span class="octicon octicon-link"></span></a>NoPreload</h1>
+
+<p>NoPreload saves bandwidth by only loading HTML5 audio content when you want it. You can download the latest version from the <a href="https://github.com/robmathers/NoPreload/releases">releases page</a>.</p>
+
+<h2>
+<a name="about" class="anchor" href="#about"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p>NoPreload was created in the spirit of minimizing excess bandwidth usage. As a fan of podcasts, I'm often checking show notes and the like for an episode, only to find that the 40+ MB file starts downloading automatically, when all I wanted was to find a link to something. Unfortunately some sites use audio player libraries that pre-load the audio files, rather than waiting for the user to click play. This extension fixes that — the audio player remains, but it only starts the download once you click play.</p>
+
+<h2>
+<a name="instructions" class="anchor" href="#instructions"><span class="octicon octicon-link"></span></a>Instructions</h2>
+
+<p><a href="https://github.com/robmathers/NoPreload/releases">Download</a> the extension file and open it to install it in Safari. No further configuration is necessary, but if desired, it is possible to set a whitelist or blacklist of sites to control which domains NoPreload runs on. This is accessible from Safari's Extensions Preferences.</p>
+
+<p><img src="https://raw.github.com/robmathers/NoPreload/master/settings.png" alt="NoPreload settings"></p>
+
+<p>If you want to only block preloading on certain domains (whitelisting), select the <strong>Only Specified Domains</strong> option, and enter the domains you want into the <strong>Domain List</strong> field. Similarly, if you want to block preloading on all domains except ones you specify (blacklisting), select the <strong>All Domains Except Specified</strong> option, and enter your blacklisted domains in the <strong>Domain List</strong> field.</p>
+
+<p>Domains should be separated by commas, with no leading <code>http://</code> or <code>https://</code>, nor any trailing backslash. Domains will match all subdomains, so <code>example.com</code> will match <code>example.com</code> and <code>www.example.com</code>, whereas <code>www.example.com</code> matches <code>www.example.com</code> but not <code>example.com</code> or <code>blog.example.com</code>.</p>
+
+<h2>
+<a name="technical-details" class="anchor" href="#technical-details"><span class="octicon octicon-link"></span></a>Technical Details</h2>
+
+<p>NoPreload works by setting the <code>preload</code> attribute on any HTML <code>&lt;audio&gt;</code> element to <code>none</code>. It launches after all the initial page load scripts have fired, so it should work with most dynamically inserted players, but not those created on user actions.</p>
+
+<h2>
+<a name="known-issues" class="anchor" href="#known-issues"><span class="octicon octicon-link"></span></a>Known Issues</h2>
+
+<ul>
+<li>NoPreload only works on players that make use of the HTML <code>&lt;audio&gt;</code> element. This means that it will not block Flash or other plugins, nor is it likely to in the future. For this sort of thing, you should check out the very useful <a href="http://hoyois.github.io/safariextensions/clicktoplugin/">ClickToPlugin</a> extension.</li>
+</ul><h2>
+<a name="version-history" class="anchor" href="#version-history"><span class="octicon octicon-link"></span></a>Version History</h2>
+
+<ul>
+<li>1.0.0: Initial release.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">NoPreload maintained by <a href="https://github.com/robmathers">robmathers</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
