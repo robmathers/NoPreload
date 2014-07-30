@@ -22,6 +22,8 @@ NoPreload works by setting the `preload` attribute on any HTML `<audio>` element
 
 ## Version History
 - 1.0.0: Initial release.
+- 1.0.1: Enabled NoPreload for pages served via HTTPS (such as [Overcast][]'s web player).
 
 [download]: https://github.com/robmathers/NoPreload/releases
 [ClickToPlugin]: http://hoyois.github.io/safariextensions/clicktoplugin/
+[Overcast]: https://overcast.fm
